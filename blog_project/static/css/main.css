@@ -1,0 +1,109 @@
+﻿body {
+    background-color: #9de2ff;
+}
+
+#navigation {
+    position: relative;
+    bottom: 20px;
+}
+
+.card-header {
+    height: 50px; /* Задаем фиксированную высоту для заголовков */
+    overflow: hidden; /* Скрываем лишний текст, если заголовок слишком длинный */
+    text-overflow: ellipsis; /* Добавляем многоточие, если текст обрезается */
+    white-space: nowrap; /* Запрещаем перенос текста на новую строку */
+  }
+
+.read-more-link {
+    text-decoration: none; /* Убираем подчеркивание */
+    margin-bottom: 10px; /* Добавляем нижний отступ */
+    margin-left: 10px;
+}
+
+.card-text {
+    margin-bottom: 10px; /* Добавляем нижний отступ */
+}
+
+.author-text {
+    margin-right: 10px !important; /* Используем !important для более высокого приоритета */
+}
+
+.registration-form .form-group {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; /* Измените значение по вашему усмотрению */
+}
+
+/* Добавим стиль для полей ввода */
+.registration-form input[type="text"],
+.registration-form input[type="email"],
+.registration-form input[type="password"] {
+    padding: 10px;
+    border: 1px solid #000;
+    border-radius: 5px;
+}
+
+/* Остальные стили, если нужно */
+.registration-form .btn-primary {
+    background-color: green;
+    color: #fff;
+}
+.registration-form .btn-success {
+    background-color: blue;
+    color: #fff;
+}
+
+/* Добавим стиль для ссылки "Login" */
+.registration-form a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    margin-right: 10px; /* Увеличьте или уменьшите значение отступа по вашему усмотрению */
+}
+
+.navbar-nav.ml-auto {
+    margin-left: auto;
+}
+
+.navbar-nav .nav-item:first-child {
+    margin-right: auto;
+}
+
+  /* Выравнивание "Профиль", "Войти", "Выйти" (справа) */
+.navbar-nav .nav-item:last-child {
+    margin-left: auto;
+}
+
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    border: 2px solid green;
+    padding: 20px;
+}
+
+.media {
+    display: flex;
+    align-items: center;
+}
+
+.account-img {
+    width: 100px; /* Размер фото, который вы хотите установить */
+    height: 100px;
+    border: 2px solid green;
+    border-radius: 50%; /* Создание круглой формы */
+    margin-right: 20px; /* Отступ между фото и текстом */
+}
+
+.account-heading {
+    font-size: 24px; /* Размер шрифта заголовка */
+    margin: 0;
+}
+
+.text-secondary {
+    font-size: 16px; /* Размер шрифта для второстепенного текста */
+    margin: 0;
+    color: #888; /* Цвет текста второстепенного текста */
+}
+
+

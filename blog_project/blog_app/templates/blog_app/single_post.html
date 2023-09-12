@@ -1,0 +1,27 @@
+﻿{% extends 'blog_app/base.html' %}
+
+{% block content %}
+    <div class="card">
+      <div class="card-header">
+        <h5 class="card-title">{{ post.title }}</h5>
+      </div>
+      <div class="card-body justify-content-start">
+        <p class="card-text">{{ post.content }}</p>
+        <a href="{% url 'home' %}" class="btn btn-primary">Назад</a>
+
+        {% if user.is_authenticated and user == post.author %}
+          <a href="{% url 'edit_post' post.id %}" class="btn btn-warning">Редактировать</a>
+          <form method="post" action="{% url 'delete_post' post.id %}" style="display: inline;">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-danger">Удалить</button>
+          </form>
+        {% endif %}
+
+      </div>
+      <div class="card-footer text-body-secondary">
+        {{ post.publish }}
+        <p class="card-text author-text">Автор: {{ post.author.username }}</p>
+      </div>
+    </div>
+{% endblock content %}
+
